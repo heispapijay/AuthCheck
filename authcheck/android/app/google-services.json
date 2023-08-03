@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486144126476",
+    "project_id": "notely-app-1d887",
+    "storage_bucket": "notely-app-1d887.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486144126476:android:cf2cc7593eaaa7d1958829",
+        "android_client_info": {
+          "package_name": "com.example.notedly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486144126476-6b05ql95gqnn8rbqf8m59o4sih9delvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPYqY3wvBj6kSJWXj-rXP67c42ReAJLqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486144126476-6b05ql95gqnn8rbqf8m59o4sih9delvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
