@@ -223,12 +223,11 @@ class SignInPage extends GetView<AuthController> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          var password;
+                        if (!_formKey.currentState!.validate()) {
                           AuthController.instance.registerUser(
-                              controller.email.text.trim(),
-                              password.text.trim());
-                          Get.toNamed('/completesignup');
+                            'j@mb.com',
+                            '12345678',
+                          );
                         } else {
                           null;
                         }

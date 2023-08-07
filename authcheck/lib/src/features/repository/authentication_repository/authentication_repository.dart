@@ -1,3 +1,5 @@
+// ignore_for_file: empty_catches, unused_catch_clause
+
 import 'package:authcheck/src/features/repository/exceptions/signup_exceptions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -30,9 +32,12 @@ class AuthenticationRepository extends GetxController {
     try {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      firebaseUser.value != null
-          ? Get.offAll(('/homepage'))
-          : Get.to('/welcomepage');
+      if (firebaseUser.value != null) {
+        print('FIREBASE USER -${firebaseUser.value}');
+        Get.offAll('/homepage');
+      } else {
+        Get.to('/welcomepage');
+      }
     } on FirebaseAuthException catch (e) {
       final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
       print('FIREBASE AUTH EXCEPTION -${ex.message}');

@@ -2,6 +2,8 @@ import 'package:authcheck/src/features/authentication/models/onboarding_details.
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../repository/authentication_repository/authentication_repository.dart';
+
 class AuthController extends GetxController {
   static AuthController get instance => Get.find();
 
@@ -12,7 +14,11 @@ class AuthController extends GetxController {
   final password = TextEditingController();
   final phone = TextEditingController();
 
-  void registerUser(String email, String password) {}
+  void registerUser(String email, String password) {
+    Get.put(AuthenticationRepository());
+    AuthenticationRepository.instance
+        .createUserWithEmailAndPassword(email, password);
+  }
 
   void signIp() {
     fullName.value;
